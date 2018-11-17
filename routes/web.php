@@ -23,4 +23,8 @@ Route::middleware(['auth'])->group(function(){
   Route::get('/home', function(){
     return view('app/home');
   })->name('home');
+
+  Route::get('/cadastro/{user}', 'UserController@cadastro')->name('cadastro');
+  Route::post('/alterar/meu_cadastro/{user}', 'UserController@alterar_cadastro')->name('alterar_cadastro');
+  Route::post('/alterar/minha_senha/{user}', 'UserController@alterar_senha')->name('alterar_senha');
 });

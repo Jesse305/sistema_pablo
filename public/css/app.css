@@ -3,6 +3,21 @@
   margin-bottom: 30px;
 }
 
+.nav-item a {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-left: 15px;
+}
+
+.nav-item a:hover {
+  text-decoration: none;
+}
+
+a.dropdown-item {
+  color: #000;
+  margin-left: 0px;
+}
+
 #page-header{
  height: 200px;
  background: url(../img/image8.jpg);
