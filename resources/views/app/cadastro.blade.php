@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('text')
+<!-- texto page header aqui  -->
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

@@ -10,7 +10,7 @@
     <title>{{ config('app.name') }}</title>
 
     <!-- Fonts -->
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
@@ -31,7 +31,9 @@
       <!-- Navbar links -->
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
-          <li class="nav-item"> <a href="{{ route('home') }}">Home</a> </li>
+          <li class="nav-item"> <a href="{{ route('home') }}">INÍCIO</a> </li>
+          <li class="nav-item"> <a href="{{ route('imc') }}">IMC</a> </li>
+          <li class="nav-item"> <a href="{{ route('acompanhamento') }}">ACOMPANHAMENTO</a> </li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown" style="margin-right:70px;">
@@ -63,8 +65,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 m-auto text-center">
-            <h1>Início</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+            <h1>@yield('h1')</h1>
+            @yield('text')
           </div>
         </div>
       </div>
@@ -95,6 +97,7 @@
   <script src="{{ asset('js/jquery.mask.min.js') }}" charset="utf-8"></script>
   <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
   <script src="{{ asset('js/sweetalert2.all.min.js') }}" charset="utf-8"></script>
+  <script src="{{ asset('js/imc.js') }}" charset="utf-8"></script>
 
   @if(session('alerta'))
   <script type="text/javascript">

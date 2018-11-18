@@ -42,7 +42,16 @@ class UserController extends Controller
         ]);
       }
 
-      if($user->update($request->all())){
+      $parametros = [
+          'name' => $request['name'],
+          'email' => $request['email'],
+          'altura_cm' => str_replace('.', '', $request['altura_cm']),
+          'peso_kg' => $request['peso_kg'],
+          'sexo_id' => $request['sexo_id'],
+          'password' => Hash::make($request['password']),
+      ];
+
+      if($user->update($parametros)){
         return redirect()
         ->back()
         ->with('alerta', [
