@@ -31,9 +31,9 @@
       <!-- Navbar links -->
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
-          <li class="nav-item"> <a href="{{ route('home') }}">INÍCIO</a> </li>
           <li class="nav-item"> <a href="{{ route('imc') }}">IMC</a> </li>
           <li class="nav-item"> <a href="{{ route('acompanhamento') }}">ACOMPANHAMENTO</a> </li>
+          <li class="nav-item"> <a href="{{ route('historico') }}">HISTÓRICO</a></li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown" style="margin-right:70px;">

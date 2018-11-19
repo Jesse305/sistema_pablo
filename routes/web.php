@@ -33,4 +33,7 @@ Route::middleware(['auth'])->group(function(){
   Route::get('/acompanhamento', 'AlimentoController@acompanhamento')->name('acompanhamento');
   Route::post('/acompanhamento/alimento/create_or_update', 'AlimentoController@createOrUpdate')->name('alimento.create_or_update');
   Route::get('/acompanhamento/alimento/remove/{id}', 'AlimentoController@remove')->name('alimento.remove');
+
+  Route::get('/historico', 'HistoricoController@historico')->name('historico');
+  Route::get('/historico/delete', 'HistoricoController@delete')->name('historico.delete');
 });
