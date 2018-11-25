@@ -31,3 +31,25 @@ $('#btn_cancel').click(function(){
   $('#alimento').val("");
   $('#calorias').val("");
 });
+
+function calculaIMC(peso , altura){
+  if(altura > 0){
+    var imc = peso / (altura/100 * altura/100);
+    imc = Math.round(imc);
+    var resultadoIMC;
+
+    if(imc < 18.5){
+      resultadoIMC = "That you are too thin.";
+    }
+    if(imc > 18.5 && imc < 25){
+      resultadoIMC = "That you are healthy.";
+    }
+    if(imc > 25){
+      resultadoIMC = "That you have overweight.";
+    }
+
+    $('#imc').html(imc);
+    $('#resultado').html(resultadoIMC);
+  }
+
+}

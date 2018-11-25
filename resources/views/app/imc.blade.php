@@ -58,3 +58,7 @@
     </div>
 </section>
 @endsection
+
+@push('scripts')
+<script src="{{ asset('js/imc.js') }}" charset="utf-8"></script>
+@endpush

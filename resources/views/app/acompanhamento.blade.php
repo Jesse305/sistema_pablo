@@ -17,6 +17,8 @@
                         <hr>
                         <p>Esta é uma medida de referência internacional reconhecida pela OMS (Organização Mundial da Saúde), mas que não mede diretamente a gordura corporal, porque não contempla a massa magra, massa gorda, líquidos e a estrutura óssea da pessoa em questão.
                         O método de cálculo do IMC é simples e rápido e permite uma avaliação geral para definir se uma pessoa se encontra em risco de obesidade.</p>
+                        <hr>
+                        <b>Seu IMC: </b> <i id="imc"></i>, <i id="resultado"></i>
                     </div>
                 </div>
             </div>
@@ -88,4 +90,7 @@
 
 @push('scripts')
 <script src="{{ asset('js/acompanhamento.js') }}" charset="utf-8"></script>
+<script type="text/javascript">
+  calculaIMC({{ Auth::user()->peso_kg}}, {{Auth::user()->altura_cm }});
+</script>
 @endpush
